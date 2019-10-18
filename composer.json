@@ -1,0 +1,54 @@
+{
+    "name": "diezeel/timeranges",
+    "description": "",
+    "keywords": [
+        "diezeel",
+        "timeranges"
+    ],
+    "homepage": "https://github.com/diezeel/timeranges",
+    "license": "The Unlicense",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sergey Kornienko",
+            "email": "diez.eel@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DieZeeL\\TimeRanges\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DieZeeL\\TimeRanges\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DieZeeL\\TimeRanges\\TimeRangesServiceProvider"
+            ],
+            "aliases": {
+                "TimeRanges": "DieZeeL\\TimeRanges\\TimeRangesFacade"
+            }
+        }
+    }
+}
